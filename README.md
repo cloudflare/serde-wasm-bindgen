@@ -52,7 +52,7 @@ Supported types and values for the deserialization:
  - `HashMap<String, _>` from any plain JavaScript object (`{ key1: value1, ... }`).
  - Rust sequence (tuple, `Vec`, `HashSet`, ...) from any JavaScript iterable (including but not limited to `Array`, ES2015 `Set`, etc.).
  - Rust byte buffer (see [`serde_bytes`](https://github.com/serde-rs/bytes)) from JavaScript `ArrayBuffer` or `Uint8Array`.
- - Typed Rust structure from any plain JavaScript object (`{ key1: value1, ... }`).
+ - Typed Rust structure from any plain JavaScript object (`{ key1: value1, ... }`) or a Map.
  - Rust enum from either a string (`"Variant"`) or a plain object. Specific representation is [controlled](https://serde.rs/enum-representations.html) by `#[serde(...)]` attributes and should be compatible with `serde-json`.
 
 Serialization is compatible with the deserialization, but it's limited to a single representation, so it chooses:
